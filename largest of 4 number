@@ -1,0 +1,32 @@
+INP
+STA A
+INP
+STA B
+INP
+STA C
+INP
+STA D
+
+LDA A
+SUB B
+BRP LOOP
+LDA B
+STA A
+LOOP LDA A
+     SUB C
+     BRP LOOP2
+     LDA C
+     STA A
+LOOP2 LDA A
+      SUB D
+      BRP END
+      LDA D
+      STA A
+END   LDA A
+      OUT
+      HLT
+
+A DAT
+B DAT
+C DAT
+D DAT
