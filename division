@@ -1,0 +1,50 @@
+INP
+STA A
+INP
+STA B
+LDA ZERO
+STA DIV
+
+LOOP LDA A
+     SUB B
+     BRP LOOP2
+     BRA END
+ 
+LOOP2 STA A 
+     LDA DIV
+     ADD ONE 
+     STA DIV
+     BRP LOOP
+END  LDA DIV
+     OUT
+     HLT
+A DAT
+B DAT
+DIV DAT
+ZERO DAT 0
+ONE DAT 1
+
+
+/* INP
+STA A
+INP
+STA B
+LDA ZERO
+STA DIV
+
+LOOP LDA A
+     BRZ END
+     SUB B 
+     STA A 
+     LDA DIV
+     ADD ONE 
+     STA DIV
+     BRA LOOP
+END  LDA DIV
+     OUT
+     HLT
+A DAT
+B DAT
+DIV DAT
+ZERO DAT 0
+ONE DAT 1 */
