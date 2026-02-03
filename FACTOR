@@ -1,0 +1,30 @@
+        INP
+        STA A
+        STA I
+
+LOOP    LDA A
+        STA TEMP
+
+RUN     LDA TEMP
+        SUB I
+        BRZ PRNT
+        BRP LOP1
+        BRA NXT
+
+LOP1    STA TEMP 
+        BRA RUN
+
+PRNT    LDA I 
+        OUT
+
+NXT     LDA I
+        SUB ONE
+        BRZ END
+        STA I
+        BRA LOOP
+END     HLT
+
+A       DAT
+I       DAT
+ONE     DAT 1
+TEMP    DAT
