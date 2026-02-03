@@ -1,0 +1,22 @@
+INP
+STA A
+LOOP LDA A
+     SUB TWO
+     STA A
+     BRZ EVEN
+     BRP LOOP
+     BRA ODD
+
+EVEN LDA ZERO
+     OUT
+     HLT
+ODD  LDA ONE
+     OUT
+     HLT
+
+A DAT
+ONE DAT 1
+TWO DAT 2
+ZERO DAT 0
+
+

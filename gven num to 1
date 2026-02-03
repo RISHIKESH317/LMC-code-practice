@@ -1,0 +1,12 @@
+INP
+STA A
+LOOP  LDA A
+      BRZ END
+      OUT
+      SUB ONE
+      STA A
+      BRP LOOP
+END      HLT
+
+A DAT
+ONE DAT 1
