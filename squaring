@@ -1,0 +1,24 @@
+INP
+STA A
+LDA A
+STA B
+LDA ZERO 
+STA SQR
+LOOP LDA B
+     BRZ END
+     LDA SQR
+     ADD A
+     STA SQR
+     LDA B
+     SUB ONE
+     STA B
+     BRA LOOP
+END LDA SQR
+    OUT
+    HLT
+
+A DAT
+B DAT
+SQR DAT
+ONE DAT 1
+ZERO DAT 0

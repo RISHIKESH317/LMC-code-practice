@@ -1,0 +1,29 @@
+INP
+STA A
+INP 
+STA B
+INP
+STA C
+
+LDA A
+STA MIN
+LDA B
+SUB MIN
+BRP CHKC
+LDA B
+STA MIN
+
+CHKC LDA C
+     SUB MIN
+     BRP END
+     LDA C
+     STA MIN
+
+END LDA MIN
+    OUT
+    HLT     
+
+A DAT 
+B DAT
+C DAT
+MIN DAT
