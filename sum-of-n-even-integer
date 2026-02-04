@@ -1,0 +1,27 @@
+        INP
+        STA A
+        LDA ZERO
+        STA N
+        LDA TWO
+        STA EVN
+LOOP    LDA A
+        BRZ END
+        LDA N
+        ADD EVN
+        STA N
+        LDA EVN
+        ADD TWO
+        STA EVN
+        LDA A
+        SUB ONE
+        STA A
+        BRA LOOP
+END     LDA N
+        OUT
+        HLT
+A       DAT
+N       DAT
+ZERO    DAT 0
+ONE     DAT 1
+TWO     DAT 2
+EVN     DAT
