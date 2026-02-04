@@ -1,0 +1,29 @@
+        INP
+        STA A
+        INP
+        STA B
+        INP
+        STA N
+        LDA A
+        OUT
+        LDA B
+        OUT
+LOOP    LDA A
+        ADD B
+        OUT
+        STA C
+        LDA N
+        SUB ONE
+        STA N
+        BRZ END
+        LDA B 
+        STA A
+        LDA C
+        STA B
+        BRA LOOP
+END     HLT
+A       DAT
+B       DAT
+C       DAT
+N       DAT
+ONE     DAT 1

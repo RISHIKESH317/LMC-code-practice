@@ -1,0 +1,19 @@
+        INP
+        STA A
+        LDA TWO
+        STA PWR
+LOOP    LDA A
+        SUB ONE
+        BRZ END
+        STA A
+        LDA PWR
+        ADD PWR
+        STA PWR
+        BRA LOOP
+END     LDA PWR
+        OUT
+        HLT
+A       DAT
+PWR     DAT
+TWO     DAT 2
+ONE     DAT 1
