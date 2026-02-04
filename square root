@@ -1,0 +1,27 @@
+        INP
+        STA A
+        LDA ONE
+        STA ROOT
+        LDA ZERO
+        STA CNT
+LOOP    LDA A
+        SUB ROOT
+        BRP LOP2
+        BRA END
+LOP2    STA A
+        LDA CNT
+        ADD ONE
+        STA CNT
+        LDA ROOT
+        ADD TWO
+        STA ROOT
+        BRA LOOP
+END     LDA CNT 
+        OUT
+        HLT
+A       DAT
+ONE     DAT 1
+ZERO    DAT 0
+ROOT    DAT
+CNT     DAT
+TWO     DAT 2
