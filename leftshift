@@ -1,0 +1,24 @@
+        INP
+        STA A
+        LDA TWO
+        STA B
+        LDA ZERO 
+        STA MUL
+LOP     LDA B
+        BRZ END
+        LDA MUL
+        ADD A
+        STA MUL
+        LDA B
+        SUB ONE
+        STA B
+        BRA LOP
+END     LDA MUL
+        OUT
+        HLT
+A       DAT
+B       DAT
+TWO     DAT 2
+ONE     DAT 1
+ZERO    DAT 0
+MUL     DAT
